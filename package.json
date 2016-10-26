@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "compile": "babel src -d lib",
-    "test-compile": "babel-node lib/*.js"
+    "test-compile": "babel-node lib/*.js",
+    "test": "mocha --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,13 @@
   },
   "homepage": "https://github.com/slaimu/how_to_create_npm_package_with_ec6#readme",
   "devDependencies": {
-    "babel-cli": "^6.16.0",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.17.0",
     "babel-preset-es2015": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0"
+    "babel-preset-stage-0": "^6.16.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3.1.2",
+    "path": "^0.12.7",
+    "request": "^2.76.0"
   }
 }

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import request from 'request';
 
-export default function downLodaFile(url, target, progress) {
+export default function downLoadFile(url, target, progress) {
   return new Promise((resolve, reject) => {
     let s = fs.createWriteStream(target);
     s.on('error', reject);
