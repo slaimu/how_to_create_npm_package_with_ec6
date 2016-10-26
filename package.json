@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "babel src -d lib",
     "test-compile": "babel-node lib/*.js",
-    "test": "mocha --compilers js:babel-core/register"
+    "test": "npm run compile && mocha --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
     "mocha": "^3.1.2",
     "path": "^0.12.7",
     "request": "^2.76.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.16.0"
   }
 }
